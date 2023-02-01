@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:notes_app/views/widgets/notes%20screen/custom_app_bar.dart';
-import 'package:notes_app/views/widgets/notes%20screen/custom_card.dart';
+import 'package:notes_app/views/widgets/notes%20screen/custom_note_item.dart';
 import 'package:notes_app/views/widgets/notes%20screen/custom_serch_icon.dart';
+import 'package:notes_app/views/widgets/notes%20screen/notes_list_view.dart';
 
 class NotesViewBody extends StatelessWidget {
   const NotesViewBody({super.key});
@@ -16,13 +17,16 @@ class NotesViewBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 12,
+            height: 14,
           ),
           CustomAppBar(),
           SizedBox(
             height: 30,
           ),
-          NoteItem(),
+          Expanded(child: NotesListView()),
+          SizedBox(
+            height: 30,
+          )
         ],
       ),
     );
@@ -34,6 +38,9 @@ class NoteItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomCard();
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6),
+      child: CustomNoteItem(),
+    );
   }
 }

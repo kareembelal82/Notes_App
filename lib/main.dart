@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/views/widgets/notes%20screen/notes_view.dart';
 
 void main() {
-  runApp(const notes_app());
+  runApp(const NotesApp());
 }
 
-class notes_app extends StatelessWidget {
-  const notes_app({super.key});
+class NotesApp extends StatelessWidget {
+  const NotesApp({super.key});
 
   @override
   Widget build(BuildContext context) {

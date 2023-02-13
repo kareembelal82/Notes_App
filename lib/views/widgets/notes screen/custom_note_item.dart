@@ -1,5 +1,3 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notes_app/views/widgets/notes%20screen/edit_notes_view.dart';
@@ -12,17 +10,18 @@ class CustomNoteItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: ((context) {
-          return EditNotesView();
+          return const EditNotesView();
         })));
       },
       child: Container(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: 18,
           top: 18,
           bottom: 18,
         ),
         decoration: BoxDecoration(
-            color: Color(0xffFFCD7A), borderRadius: BorderRadius.circular(16)),
+            color: const Color(0xffFFCD7A),
+            borderRadius: BorderRadius.circular(16)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
@@ -45,7 +44,7 @@ class CustomNoteItem extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                icon: Icon(
+                icon: const Icon(
                   FontAwesomeIcons.trash,
                   color: Colors.black,
                 ),
@@ -90,7 +89,7 @@ class CustomCardKareem extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       elevation: 26,
       child: Container(
-        color: Color(0xffFFCD7A),
+        color: const Color(0xffFFCD7A),
         width: double.infinity,
         height: 200,
         child: Padding(
@@ -100,7 +99,7 @@ class CustomCardKareem extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'flutter tips',
                     style: TextStyle(fontSize: 34, color: Colors.black),
                   ),
@@ -119,7 +118,7 @@ class CustomCardKareem extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.restore_from_trash_sharp,
                     size: 46,
                   ),

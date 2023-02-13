@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:notes_app/views/widgets/notes%20screen/constants.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -19,13 +17,13 @@ class CustomTextField extends StatelessWidget {
           focusedBorder: build_border(),
           disabledBorder: build_border(),
           hintText: hintText,
-          hintStyle: TextStyle(color: KPrimaryColor, fontSize: 18)),
+          hintStyle: const TextStyle(color: KPrimaryColor, fontSize: 18)),
     );
   }
 
   OutlineInputBorder build_border() {
     return OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: BorderSide(color: Colors.white));
+        borderSide: const BorderSide(color: Colors.white));
   }
 }

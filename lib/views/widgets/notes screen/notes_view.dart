@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:notes_app/views/widgets/notes%20screen/add_note_buttom_sheet.dart';
 
 import 'notes_view_body.dart';
@@ -21,9 +19,9 @@ class NotesView extends StatelessWidget {
                 return const AddNoteButtomSheet();
               });
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
-      body: NotesViewBody(),
+      body: const NotesViewBody(),
     );
   }
 }
